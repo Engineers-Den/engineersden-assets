@@ -481,6 +481,16 @@
       border-radius:18px;
       padding:18px;
       margin-top:18px;
+      transition:.25s ease;
+    }
+
+    .office-box:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 22px rgba(16, 58, 100, 0.08);
+    }
+
+    .office-link{
+      display:block;
     }
 
     .office-box h4{
@@ -524,6 +534,44 @@
       font-size:18px;
       font-weight:700;
       text-align:center;
+    }
+
+    .contact-lines a{
+      color:#fff;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+    }
+
+    .contact-lines a:hover{
+      text-decoration:underline;
+    }
+
+    .social-row{
+      margin-top:12px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:14px;
+    }
+
+    .fb-link{
+      width:46px;
+      height:46px;
+      border-radius:50%;
+      background:#fff;
+      color:#1877f2;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      box-shadow:0 8px 18px rgba(0,0,0,0.15);
+      transition:.25s ease;
+    }
+
+    .fb-link:hover{
+      transform:translateY(-2px) scale(1.04);
     }
 
     .footer-note{
@@ -825,7 +873,7 @@
         </div>
         <div class="why-item">
           <div class="emoji">📘</div>
-          <h3>Guidence &amp; Documentation</h3>
+          <h3>Guidance &amp; Documentation</h3>
         </div>
       </div>
     </div>
@@ -905,8 +953,8 @@
         </div>
 
         <div class="member-card small">
-          <div class="photo-wrap">
-            <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/rajia-sultana.JPG" alt="Rajia Sultana">
+          <div class="photo-wrap photo-placeholder">
+            <div class="placeholder-text">Photo Coming Soon</div>
           </div>
           <div class="member-info">
             <h3 style="font-size:20px;">Zahangir Alam (Sobuj)</h3>
@@ -917,14 +965,14 @@
         </div>
 
         <div class="member-card small">
-          <div class="photo-wrap">
+         <div class="photo-wrap">
             <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/Rejaul-Karim-Raihan.png" alt="Rajia Sultana">
           </div>
           <div class="member-info">
             <h3 style="font-size:20px;">Rejaul Karim Raihan</h3>
             <p class="role">Assistant Project Advisor</p>
             <p class="dept">Dept. of EEE, IUBAT</p>
-            <p class="email"><a href="mailto:rezaulkorimeee304@gmail.com">rezaulkorimeee304@gmail.com</a></p>
+            <p class="email"><a href="mailto:rezaulkorimpk@gmail.com">rezaulkorimpk@gmail.com</a></p>
           </div>
         </div>
       </div>
@@ -978,10 +1026,12 @@
             </p>
           </div>
 
-          <div class="office-box">
-            <h4>Office 1</h4>
-            <p>50 meter West of Greater road mosque, Kadirganj, Rajshahi.</p>
-          </div>
+          <a class="office-link" href="https://maps.app.goo.gl/QsUctiAoa7hXpEz16" target="_blank" rel="noopener noreferrer">
+            <div class="office-box">
+              <h4>Office 1</h4>
+              <p>50 meter West of Greater road mosque, Kadirganj, Rajshahi.</p>
+            </div>
+          </a>
 
           <div class="office-box">
             <h4>Office 2</h4>
@@ -995,9 +1045,15 @@
             For inquiries, collaborations, student projects, and business solutions, connect with us using the company contact details below.
           </p>
           <div class="contact-lines">
-            <div>📞 01705188134 (Whatsapp)</div>
-            <div>📞 01748339454</div>
-            <div>📧 engineersden15@gmail.com</div>
+            <div>📞 +880 1705 188 134 (Whatsapp)</div>
+            <div>📞 +880 1748 339 454</div>
+            <div>📧 <a href="mailto:engineersden15@gmail.com">engineersden15@gmail.com</a></div>
+          </div>
+
+          <div class="social-row">
+            <a class="fb-link" href="https://www.facebook.com/profile.php?id=61572656340205" target="_blank" rel="noopener noreferrer" aria-label="Engineer’s Den Facebook Page" title="Visit our Facebook page">
+              f
+            </a>
           </div>
         </div>
       </div>
