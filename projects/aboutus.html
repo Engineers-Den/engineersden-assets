@@ -1,1 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Engineer's Den</title>
+  <meta name="description" content="Learn more about Engineer's Den — R&D, Product Development, and Science Club activities serving students, businesses, and general consumers." />
+  <style>
+    :root{
+      --primary:#118be1;
+      --primary-dark:#0a5ea8;
+      --accent:#f5a623;
+      --text:#1d2736;
+      --muted:#5b6878;
+      --bg:#f4f8fc;
+      --card:#ffffff;
+      --border:#dbe7f3;
+      --shadow:0 12px 30px rgba(16, 58, 100, 0.10);
+      --radius:22px;
+      --max:1200px;
+    }
 
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(17,139,225,.10), transparent 28%),
+        radial-gradient(circle at bottom right, rgba(245,166,35,.10), transparent 22%),
+        var(--bg);
+      line-height:1.6;
+    }
+
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+
+    .container{
+      width:min(var(--max), calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .section{
+      padding:72px 0;
+    }
+
+    .section-title{
+      font-size:clamp(34px, 5vw, 52px);
+      line-height:1.15;
+      margin:0 0 16px;
+      color:var(--text);
+      text-align:center;
+    }
+
+    .section-subtitle{
+      font-size:17px;
+      color:var(--muted);
+      max-width:780px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    .badge{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(17,139,225,.10);
+      color:var(--primary-dark);
+      font-weight:700;
+      font-size:13px;
+      letter-spacing:.3px;
+      margin-bottom:16px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .hero{
+      padding:72px 0 56px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero-wrap{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:28px;
+      align-items:center;
+      background:linear-gradient(135deg, #ffffff 0%, #eff7ff 100%);
+      border:1px solid var(--border);
+      border-radius:32px;
+      box-shadow:var(--shadow);
+      padding:36px;
+    }
+
+    .hero-logo{
+      width:110px;
+      margin-bottom:18px;
+      border-radius:18px;
+      background:#fff;
+      padding:8px;
+      box-shadow:0 8px 20px rgba(17,139,225,.10);
+    }
+
+    .hero h1{
+      font-size:clamp(34px, 5vw, 58px);
+      line-height:1.05;
+      margin:0 0 16px;
+      letter-spacing:-1px;
+    }
+
+    .hero .tagline{
+      font-size:18px;
+      font-weight:700;
+      color:var(--primary-dark);
+      margin-bottom:18px;
+    }
+
+    .hero p{
+      margin:0 0 26px;
+      color:var(--muted);
+      max-width:700px;
+      font-size:17px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:48px;
+      padding:0 20px;
+      border-radius:14px;
+      font-weight:700;
+      transition:.25s ease;
+      border:2px solid transparent;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color:#fff;
+      box-shadow:0 12px 24px rgba(17,139,225,.22);
+    }
+
+    .btn-primary:hover{transform:translateY(-2px)}
+
+    .btn-outline{
+      border-color:var(--primary);
+      color:var(--primary-dark);
+      background:#fff;
+    }
+
+    .hero-stats{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+
+    .stat{
+      padding:22px 18px;
+      border-radius:20px;
+      background:#fff;
+      border:1px solid var(--border);
+    }
+
+    .stat h3{
+      margin:0 0 6px;
+      font-size:15px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .stat p{
+      margin:0;
+      font-size:22px;
+      font-weight:800;
+      color:var(--text);
+      line-height:1.25;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .content-card{
+      padding:28px;
+    }
+
+    .content-card p:last-child{margin-bottom:0}
+    .content-card p{margin:0 0 14px;color:var(--muted); text-align:justify;}
+    .content-card h3{
+      text-align:center;
+      font-size:28px;
+      margin-top:0;
+      margin-bottom:14px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:22px;
+    }
+
+    .icon-card{
+      padding:28px 24px;
+      position:relative;
+      overflow:hidden;
+      text-align:center;
+    }
+
+    .icon-card .icon{
+      width:54px;
+      height:54px;
+      border-radius:16px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:26px;
+      background:linear-gradient(135deg, rgba(17,139,225,.12), rgba(245,166,35,.16));
+      margin:0 auto 16px;
+    }
+
+    .icon-card h3{
+      margin:0 0 10px;
+      font-size:24px;
+    }
+
+    .icon-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:15px;
+      text-align:justify;
+    }
+
+    .audience-card{
+      padding:28px 24px;
+      text-align:center;
+    }
+
+    .audience-card .audience-icon{
+      font-size:34px;
+      margin-bottom:10px;
+    }
+
+    .audience-card h3{
+      margin:0 0 10px;
+      font-size:24px;
+    }
+
+    .audience-card p{
+      margin:0;
+      color:var(--muted);
+      text-align:justify;
+    }
+
+    .why-list{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+      margin-top:28px;
+    }
+
+    .why-item{
+      padding:24px;
+      text-align:center;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:20px;
+      box-shadow:var(--shadow);
+    }
+
+    .why-item .emoji{
+      font-size:34px;
+      margin-bottom:10px;
+    }
+
+    .why-item h3{
+      margin:0;
+      font-size:24px;
+    }
+
+    .team-large{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:24px;
+      max-width:860px;
+      margin:28px auto 0;
+    }
+
+    .team-small{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+      max-width:980px;
+      margin:24px auto 0;
+    }
+
+    .member-card{
+      overflow:hidden;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .member-card.large .photo-wrap{
+      aspect-ratio: 4 / 4.8;
+      background:linear-gradient(180deg,#eef6ff,#ffffff);
+    }
+
+    .member-card.small{
+      padding-top:20px;
+    }
+
+    .member-card.small .photo-wrap{
+      aspect-ratio: 3 / 3.5;
+      background:linear-gradient(180deg,#f4f8fc,#ffffff);
+      max-width:210px;
+      margin:0 auto;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--border);
+    }
+
+    .member-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center top;
+    }
+
+    .member-info{
+      padding:22px;
+    }
+
+    .member-info h3{
+      margin:0 0 6px;
+      font-size:23px;
+      text-align:center;
+    }
+
+    .member-info .role{
+      color:var(--primary-dark);
+      font-weight:800;
+      margin:0 0 8px;
+      text-align:center;
+    }
+
+    .member-info .dept{
+      color:var(--muted);
+      margin:0;
+      font-size:15px;
+      text-align:center;
+    }
+
+    .recognition-wrap{
+      display:grid;
+      grid-template-columns: 1fr .95fr;
+      gap:24px;
+      align-items:start;
+    }
+
+    .achievement-card,
+    .certificate-card,
+    .contact-card{
+      padding:28px;
+    }
+
+    .achievement-card h3,
+    .certificate-card h3{
+      text-align:center;
+      font-size:30px;
+      margin-top:0;
+    }
+
+    .achievement-list{
+      list-style:none;
+      padding:0;
+      margin:18px 0 0;
+    }
+
+    .achievement-list li{
+      padding:16px 16px 16px 54px;
+      position:relative;
+      margin-bottom:14px;
+      border-radius:18px;
+      background:#f8fbff;
+      border:1px solid var(--border);
+      color:var(--text);
+      font-weight:700;
+    }
+
+    .achievement-list li::before{
+      content:"★";
+      position:absolute;
+      left:18px;
+      top:14px;
+      font-size:22px;
+      color:var(--accent);
+    }
+
+    .certificate-img{
+      margin-top:18px;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid var(--border);
+      background:#fff;
+    }
+
+    .certificate-note{
+      color:var(--muted);
+      margin:14px 0 0;
+      font-size:14px;
+      text-align:center;
+    }
+
+    .contact-wrap{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .office-box{
+      background:#f8fbff;
+      border:1px solid var(--border);
+      border-radius:18px;
+      padding:18px;
+      margin-top:18px;
+    }
+
+    .office-box h4{
+      margin:0 0 8px;
+      font-size:22px;
+      text-align:center;
+    }
+
+    .office-box p{
+      margin:0;
+      color:var(--muted);
+      text-align:center;
+    }
+
+    .contact-main{
+      padding:28px;
+      background:linear-gradient(135deg, #118be1, #0a5ea8);
+      color:#fff;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+    }
+
+    .contact-main h3{
+      margin:0 0 16px;
+      font-size:32px;
+      text-align:center;
+    }
+
+    .contact-main p{
+      margin:0 0 20px;
+      color:rgba(255,255,255,.92);
+      text-align:center;
+    }
+
+    .contact-lines{
+      display:grid;
+      gap:12px;
+      font-size:18px;
+      font-weight:700;
+      text-align:center;
+    }
+
+    .footer-note{
+      text-align:center;
+      color:var(--muted);
+      font-size:14px;
+      padding:16px 0 34px;
+    }
+
+    .center-head{
+      text-align:center;
+      margin-bottom:28px;
+    }
+
+    .center-head .section-subtitle{
+      margin:0 auto;
+    }
+
+    @media (max-width: 1024px){
+      .hero-wrap,
+      .recognition-wrap,
+      .contact-wrap,
+      .two-col{
+        grid-template-columns:1fr;
+      }
+
+      .grid-3,
+      .why-list{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .team-small{
+        grid-template-columns:repeat(2,1fr);
+      }
+    }
+
+    @media (max-width: 700px){
+      .hero{
+        padding-top:36px;
+      }
+
+      .hero-wrap{
+        padding:22px;
+      }
+
+      .hero-stats,
+      .grid-3,
+      .grid-2,
+      .why-list,
+      .team-large,
+      .team-small,
+      .contact-wrap{
+        grid-template-columns:1fr;
+      }
+
+      .section{
+        padding:54px 0;
+      }
+
+      .member-card.small .photo-wrap{
+        max-width:180px;
+      }
+
+      .contact-main h3{
+        font-size:26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div class="hero-wrap">
+        <div>
+          <img class="hero-logo" src="https://raw.githubusercontent.com/Engineers-Den/engineersden-assets/0ca2099136957c2b2887cc3b236ed94339216b71/logo.jpg">
+          <div class="badge">About Engineer's Den</div>
+          <h1>Engineering ideas into real-world solutions.</h1>
+          <div class="tagline">R&amp;D | Product Development | Science Club</div>
+          <p>
+            Engineer’s Den is an innovation-driven startup working across research and development,
+            product design and development, and science club activities. We help students, businesses,
+            and general consumers through practical engineering, prototyping, and technology-led solutions.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Contact Us</a>
+            <a class="btn btn-outline" href="#team">Meet the Team</a>
+          </div>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <h3>Founded</h3>
+            <p>May 2024</p>
+          </div>
+          <div class="stat">
+            <h3>Core Focus</h3>
+            <p>Innovation &amp; Product Building</p>
+          </div>
+          <div class="stat">
+            <h3>Who We Serve</h3>
+            <p>Businesses, Students, Consumers</p>
+          </div>
+          <div class="stat">
+            <h3>Strength</h3>
+            <p>Custom &amp; Affordable Solutions</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="who-we-are">
+    <div class="container">
+      <div class="center-head">
+        <div class="badge">Who We Are</div>
+        <h2 class="section-title">A multidisciplinary platform for innovation, prototyping, and applied learning.</h2>
+        <p class="section-subtitle">
+          Engineer’s Den currently operates in three major areas: R&amp;D services, product design and development,
+          and science club activities. We provide R&amp;D support in electronics-related fields, supply lab-grade
+          components and equipment, design products in-house, and support student projects through prototyping,
+          3D printing, and laser cutting.
+        </p>
+      </div>
+
+      <div class="two-col" style="margin-top:28px;">
+        <div class="card content-card">
+          <h3>What defines us</h3>
+          <p>
+            We combine technical problem-solving with practical execution. Our work is built around designing,
+            developing, testing, and supporting real solutions that can be used in education, research, industry,
+            and everyday life.
+          </p>
+          <p>
+            From academic project support to custom business solutions, Engineer’s Den aims to make innovation
+            more accessible, actionable, and affordable.
+          </p>
+        </div>
+
+        <div class="card content-card">
+          <h3>What makes us different</h3>
+          <p>
+            Our strength lies in connecting theory with real implementation. We do not just discuss ideas —
+            we turn them into prototypes, products, systems, and learning experiences.
+          </p>
+          <p>
+            This practical mindset allows us to serve researchers, students, organizations, and general consumers
+            under one innovation-focused brand.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="story">
+    <div class="container">
+      <div class="center-head">
+        <div class="badge">Our Story</div>
+        <h2 class="section-title">Built from collaboration, experience, and a shared vision.</h2>
+      </div>
+      <div class="card content-card">
+        <p>
+          Engineer’s Den was founded in May 2024 by two engineers, <strong>Md. Rakib Hossain</strong> and
+          <strong>Fuzayel Mahmud</strong>. As long-time collaborators in electronics and applied engineering,
+          they brought together their hands-on experience and shared vision to create a firm focused on
+          designing products and advancing R&amp;D in Bangladesh.
+        </p>
+        <p>
+          What started as a strong technical partnership has now grown into a broader platform that supports
+          product development, innovation services, student project assistance, and science-based community activities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="mission-vision">
+    <div class="container">
+      <div class="center-head">
+        <div class="badge">Mission &amp; Vision</div>
+        <h2 class="section-title">Driven by impact, practicality, and long-term innovation.</h2>
+      </div>
+
+      <div class="grid-2">
+        <div class="card content-card">
+          <h3>Our Mission</h3>
+          <p>
+            Our mission is to bridge the gap in Bangladesh’s innovation landscape by offering in-house
+            product development, empowering students with practical skills, and providing affordable
+            R&amp;D solutions to businesses and researchers.
+          </p>
+        </div>
+
+        <div class="card content-card">
+          <h3>Our Vision</h3>
+          <p>
+            We envision Engineer’s Den as a hub of innovation that tackles local challenges through
+            technology, delivering solutions that shape a better future for our nation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="what-we-do">
+    <div class="container">
+      <div class="center-head">
+        <div class="badge">What We Do</div>
+        <h2 class="section-title">Three focused areas, one innovation-driven identity.</h2>
+      </div>
+
+      <div class="grid-3">
+        <div class="card icon-card">
+          <div class="icon">⚙️</div>
+          <h3>R&amp;D</h3>
+          <p>
+            We provide research and development support for companies, researchers, and technical projects,
+            especially in electronics and innovation-oriented applications.
+          </p>
+        </div>
+
+        <div class="card icon-card">
+          <div class="icon">🧠</div>
+          <h3>Product Development</h3>
+          <p>
+            We design, prototype, refine, and produce our own products in-house while also supporting
+            custom solution development for broader practical needs.
+          </p>
+        </div>
+
+        <div class="card icon-card">
+          <div class="icon">🔬</div>
+          <h3>Science Club Activities</h3>
+          <p>
+            Through workshops, student project support, and hands-on learning opportunities, we aim to
+            encourage practical science and engineering engagement in the community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="who-we-serve">
+    <div class="container">
+      <div class="center-head">
+        <div class="badge">Who We Serve</div>
+        <h2 class="section-title">Supporting multiple user groups through tailored solutions.</h2>
+      </div>
+
+      <div class="grid-3">
+        <div class="card audience-card">
+          <div class="audience-icon">🏭</div>
+          <h3>Business &amp; Factory Owners</h3>
+          <p>
+            We support industrial and commercial problem-solving through R&amp;D, system design,
+            prototyping, and custom engineering services.
+          </p>
+        </div>
+
+        <div class="card audience-card">
+          <div class="audience-icon">🎓</div>
+          <h3>Students</h3>
+          <p>
+            We help students with project design, prototyping, practical learning support,
+            equipment access, and fabrication services.
+          </p>
+        </div>
+
+        <div class="card audience-card">
+          <div class="audience-icon">🏠</div>
+          <h3>General Consumers</h3>
+          <p>
+            We develop practical consumer-oriented solutions and smart products with a focus on utility,
+            affordability, and meaningful everyday value.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why-us">
+    <div class="container">
+      <div class="center-head">
+        <div class="badge">Why Choose Us</div>
+        <h2 class="section-title">Built on experience, flexibility, and value.</h2>
+      </div>
+
+      <div class="why-list">
+        <div class="why-item">
+          <div class="emoji">👨‍💼👨‍💼👨‍💼</div>
+          <h3>Experienced Team</h3>
+        </div>
+        <div class="why-item">
+          <div class="emoji">🛠️</div>
+          <h3>Custom Solutions</h3>
+        </div>
+        <div class="why-item">
+          <div class="emoji">💰</div>
+          <h3>Affordable Cost</h3>
+        </div>
+        <div align="center" class="why-item">
+          <div class="emoji">📃🧑‍🏭</div>
+          <h3>Guidence & Documentation</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="team">
+    <div class="container">
+      <div class="center-head">
+        <div class="badge">Leadership &amp; Team</div>
+        <h2 class="section-title">The people behind Engineer’s Den.</h2>
+        <p class="section-subtitle">
+          A growing team combining engineering, research, business support, and market-focused thinking.
+        </p>
+      </div>
+
+      <div class="team-large">
+        <div class="member-card large">
+          <div class="photo-wrap">
+            <img src="https://raw.githubusercontent.com/Engineers-Den/engineersden-assets/0ca2099136957c2b2887cc3b236ed94339216b71/md-rakib-hossen.png">
+          </div>
+          <div class="member-info">
+            <h3>Md. Rakib Hossen</h3>
+            <p class="role">Founder & CEO</p>
+            <p class="dept">Dept. of Civil, RUET</p>
+          </div>
+        </div>
+
+        <div class="member-card large">
+          <div class="photo-wrap">
+            <img src="https://raw.githubusercontent.com/Engineers-Den/engineersden-assets/0ca2099136957c2b2887cc3b236ed94339216b71/fuzayel-mahmud.jpeg">
+          </div>
+          <div class="member-info">
+            <h3>Fuzayel Mahmud</h3>
+            <p class="role">Co-Founder & COO</p>
+            <p class="dept">Dept. of EEE, Jain University, Bangalore</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="team-small">
+        <div class="member-card small">
+          <div class="photo-wrap">
+            <img src="https://raw.githubusercontent.com/Engineers-Den/engineersden-assets/0ca2099136957c2b2887cc3b236ed94339216b71/jahid-hassan.jpg">
+          </div>
+          <div class="member-info">
+            <h3 style="font-size:20px;">Md. Jahid Hassan</h3>
+            <p class="role">Advisor</p>
+            <p class="dept">Dept. of Mechanical Engineering, CUET</p>
+          </div>
+        </div>
+
+        <div class="member-card small">
+          <div class="photo-wrap">
+            <img src="https://drive.google.com/uc?export=view&id=1Npzau51oTJU2nDGEEzAXsmbhbB_aLAYh" alt="Tanbirul Islam">
+          </div>
+          <div class="member-info">
+            <h3 style="font-size:20px;">Tanbirul Islam</h3>
+            <p class="role">Head of Marketing &amp; Product Research</p>
+            <p class="dept">Dept. of Agri Engineering, BAU</p>
+          </div>
+        </div>
+
+        <div class="member-card small">
+          <div class="photo-wrap">
+            <img src="https://drive.google.com/uc?export=view&id=1S30YHRgnb-r7BK6jwVbGXC8NWEMpy9PV" alt="Rajia Sultana">
+          </div>
+          <div class="member-info">
+            <h3 style="font-size:20px;">Rajia Sultana</h3>
+            <p class="role">Accountant</p>
+            <p class="dept">Dept. of Accounting, Rajshahi College</p>
+          </div>
+        </div>
+         <div class="member-card small">
+          <div class="photo-wrap">
+            <img src="https://drive.google.com/uc?export=view&id=1S30YHRgnb-r7BK6jwVbGXC8NWEMpy9PV" alt="sobuj">
+          </div>
+          <div class="member-info">
+            <h3 style="font-size:20px;">Zahangir Alam (Sobuj)</h3>
+            <p class="role">Senior Project Advisor</p>
+            <p class="dept">Dept. of EEE, RUET</p>
+          </div>
+        </div>
+       <div class="member-card small">
+          <div class="photo-wrap">
+            <img src="https://drive.google.com/uc?export=view&id=1S30YHRgnb-r7BK6jwVbGXC8NWEMpy9PV" alt="sobuj">
+          </div>
+          <div class="member-info">
+            <h3 style="font-size:20px;">Rejaul Karim Raihan</h3>
+            <p class="role">Assistant Project Advisor</p>
+            <p class="dept">Dept. of EEE, IUBAT</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="recognition">
+    <div class="container">
+      <div class="center-head">
+        <div class="badge">Recognition &amp; Trust</div>
+        <h2 class="section-title">Achievements and institutional recognition.</h2>
+      </div>
+
+      <div class="recognition-wrap">
+        <div class="card achievement-card">
+          <h3>Achievements</h3>
+          <ul class="achievement-list">
+            <li>2026 BCSIR Science and Tech Fest — 1st Runner-up</li>
+            <li>2025 BCSIR Science and Tech Fest — 2nd Runner-up</li>
+            <li>Co-Partner of Extrude 1.0, RUET SCADR Club</li>
+          </ul>
+        </div>
+
+        <div class="card certificate-card">
+          <h3>Science Club Registration</h3>
+          <p style="margin:0; color:var(--muted); text-align:justify;">
+            Engineer’s Den also holds a registered science club identity, reinforcing its role in
+            science learning, engagement, and innovation-focused activities.
+          </p>
+          <div class="certificate-img">
+            <img src="https://drive.google.com/uc?export=view&id=1Du5e2Ng2kWvvc7xOOWqmO6KAQKwkeNiB" alt="Science Club Registration Certificate">
+          </div>
+          <p class="certificate-note">
+            Certificate included as a trust element for institutional and public credibility.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="card contact-card">
+          <div class="center-head" style="margin-bottom:0;">
+            <div class="badge">Office &amp; Contact</div>
+            <h2 class="section-title" style="margin-bottom:8px;">Let’s build something meaningful together.</h2>
+            <p class="section-subtitle">
+              Reach out to Engineer’s Den for project support, collaboration, product development,
+              research assistance, or science-focused activities.
+            </p>
+          </div>
+
+          <div class="office-box">
+            <h4>Office 1</h4>
+            <p>50 meter West of Greater road mosque, Kadirganj, Rajshahi.</p>
+          </div>
+
+          <div class="office-box">
+            <h4>Office 2</h4>
+            <p>Niketon Bazar Gate, Gulshan, Dhaka.</p>
+          </div>
+        </div>
+
+        <div class="contact-main">
+          <h3>Contact Engineer’s Den</h3>
+          <p>
+            For inquiries, collaborations, student projects, and business solutions, connect with us using the company contact details below.
+          </p>
+          <div class="contact-lines">
+            <div>📞 01705188134 (Whatsapp)</div>
+            <div>📞 01748339454</div>
+            <div>📧 engineersden15@gmail.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="footer-note">
+      © Engineer’s Den — Innovation through R&amp;D, product development, and science-driven action.
+    </div>
+  </div>
+
+</body>
+</html>
