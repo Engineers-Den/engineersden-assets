@@ -275,7 +275,7 @@
 
     .why-list{
       display:grid;
-      grid-template-columns:repeat(3,1fr);
+      grid-template-columns:repeat(4,1fr);
       gap:20px;
       margin-top:28px;
     }
@@ -311,7 +311,7 @@
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:22px;
-      max-width:980px;
+      max-width:1120px;
       margin:24px auto 0;
     }
 
@@ -371,6 +371,40 @@
       margin:0;
       font-size:15px;
       text-align:center;
+    }
+
+    .email{
+      margin:10px 0 0;
+      text-align:center;
+      font-size:14px;
+      word-break:break-word;
+    }
+
+    .email a{
+      color:var(--primary-dark);
+      font-weight:700;
+      text-decoration:none;
+    }
+
+    .email a:hover{
+      text-decoration:underline;
+    }
+
+    .photo-placeholder{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:linear-gradient(180deg,#eef4fb,#ffffff);
+      border:1px dashed var(--border);
+      min-height:220px;
+    }
+
+    .placeholder-text{
+      color:var(--muted);
+      font-weight:700;
+      font-size:15px;
+      text-align:center;
+      padding:20px;
     }
 
     .recognition-wrap{
@@ -565,7 +599,7 @@
     <div class="container">
       <div class="hero-wrap">
         <div>
-          <img class="hero-logo" src="https://raw.githubusercontent.com/Engineers-Den/engineersden-assets/0ca2099136957c2b2887cc3b236ed94339216b71/logo.jpg">
+          <img class="hero-logo" src="https://engineers-den.github.io/engineersden-assets/aboutUS/logo.jpg" alt="Engineer's Den logo">
           <div class="badge">About Engineer's Den</div>
           <h1>Engineering ideas into real-world solutions.</h1>
           <div class="tagline">R&amp;D | Product Development | Science Club</div>
@@ -778,7 +812,7 @@
 
       <div class="why-list">
         <div class="why-item">
-          <div class="emoji">👨‍💼👨‍💼👨‍💼</div>
+          <div class="emoji">👨‍💼</div>
           <h3>Experienced Team</h3>
         </div>
         <div class="why-item">
@@ -789,9 +823,9 @@
           <div class="emoji">💰</div>
           <h3>Affordable Cost</h3>
         </div>
-        <div align="center" class="why-item">
-          <div class="emoji">📃🧑‍🏭</div>
-          <h3>Guidence & Documentation</h3>
+        <div class="why-item">
+          <div class="emoji">📘</div>
+          <h3>Guidence &amp; Documentation</h3>
         </div>
       </div>
     </div>
@@ -810,23 +844,25 @@
       <div class="team-large">
         <div class="member-card large">
           <div class="photo-wrap">
-            <img src="https://raw.githubusercontent.com/Engineers-Den/engineersden-assets/0ca2099136957c2b2887cc3b236ed94339216b71/md-rakib-hossen.png">
+            <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/md-rakib-hossen.png" alt="Md. Rakib Hossen">
           </div>
           <div class="member-info">
             <h3>Md. Rakib Hossen</h3>
-            <p class="role">Founder & CEO</p>
+            <p class="role">Founder &amp; CEO</p>
             <p class="dept">Dept. of Civil, RUET</p>
+            <p class="email"><a href="mailto:rakibhossen549@gmail.com">rakibhossen549@gmail.com</a></p>
           </div>
         </div>
 
         <div class="member-card large">
           <div class="photo-wrap">
-            <img src="https://raw.githubusercontent.com/Engineers-Den/engineersden-assets/0ca2099136957c2b2887cc3b236ed94339216b71/fuzayel-mahmud.jpeg">
+            <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/fuzayel-mahmud.jpeg" alt="Fuzayel Mahmud">
           </div>
           <div class="member-info">
             <h3>Fuzayel Mahmud</h3>
-            <p class="role">Co-Founder & COO</p>
+            <p class="role">Co-Founder &amp; COO</p>
             <p class="dept">Dept. of EEE, Jain University, Bangalore</p>
+            <p class="email"><a href="mailto:fuzayelmahmud@gmail.com">fuzayelmahmud@gmail.com</a></p>
           </div>
         </div>
       </div>
@@ -834,54 +870,61 @@
       <div class="team-small">
         <div class="member-card small">
           <div class="photo-wrap">
-            <img src="https://raw.githubusercontent.com/Engineers-Den/engineersden-assets/0ca2099136957c2b2887cc3b236ed94339216b71/jahid-hassan.jpg">
+            <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/jahid-hassan.jpg" alt="Md. Jahid Hassan">
           </div>
           <div class="member-info">
             <h3 style="font-size:20px;">Md. Jahid Hassan</h3>
             <p class="role">Advisor</p>
             <p class="dept">Dept. of Mechanical Engineering, CUET</p>
+            <p class="email"><a href="mailto:jahid017738@gmail.com">jahid017738@gmail.com</a></p>
           </div>
         </div>
 
         <div class="member-card small">
           <div class="photo-wrap">
-            <img src="https://drive.google.com/uc?export=view&id=1Npzau51oTJU2nDGEEzAXsmbhbB_aLAYh" alt="Tanbirul Islam">
+            <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/tanbirul-islam.JPG" alt="Tanbirul Islam">
           </div>
           <div class="member-info">
             <h3 style="font-size:20px;">Tanbirul Islam</h3>
             <p class="role">Head of Marketing &amp; Product Research</p>
             <p class="dept">Dept. of Agri Engineering, BAU</p>
+            <p class="email"><a href="mailto:tanbirlikhon@gmail.com">tanbirlikhon@gmail.com</a></p>
           </div>
         </div>
 
         <div class="member-card small">
           <div class="photo-wrap">
-            <img src="https://drive.google.com/uc?export=view&id=1S30YHRgnb-r7BK6jwVbGXC8NWEMpy9PV" alt="Rajia Sultana">
+            <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/rajia-sultana.JPG" alt="Rajia Sultana">
           </div>
           <div class="member-info">
             <h3 style="font-size:20px;">Rajia Sultana</h3>
             <p class="role">Accountant</p>
             <p class="dept">Dept. of Accounting, Rajshahi College</p>
+            <p class="email"><a href="mailto:rajia0251@gmail.com">rajia0251@gmail.com</a></p>
           </div>
         </div>
-         <div class="member-card small">
+
+        <div class="member-card small">
           <div class="photo-wrap">
-            <img src="https://drive.google.com/uc?export=view&id=1S30YHRgnb-r7BK6jwVbGXC8NWEMpy9PV" alt="sobuj">
+            <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/rajia-sultana.JPG" alt="Rajia Sultana">
           </div>
           <div class="member-info">
             <h3 style="font-size:20px;">Zahangir Alam (Sobuj)</h3>
             <p class="role">Senior Project Advisor</p>
             <p class="dept">Dept. of EEE, RUET</p>
+            <p class="email"><a href="mailto:sobujzahangir@gmail.com">sobujzahangir@gmail.com</a></p>
           </div>
         </div>
-       <div class="member-card small">
+
+        <div class="member-card small">
           <div class="photo-wrap">
-            <img src="https://drive.google.com/uc?export=view&id=1S30YHRgnb-r7BK6jwVbGXC8NWEMpy9PV" alt="sobuj">
+            <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/Rejaul-Karim-Raihan.png" alt="Rajia Sultana">
           </div>
           <div class="member-info">
             <h3 style="font-size:20px;">Rejaul Karim Raihan</h3>
             <p class="role">Assistant Project Advisor</p>
             <p class="dept">Dept. of EEE, IUBAT</p>
+            <p class="email"><a href="mailto:rezaulkorimeee304@gmail.com">rezaulkorimeee304@gmail.com</a></p>
           </div>
         </div>
       </div>
@@ -912,7 +955,7 @@
             science learning, engagement, and innovation-focused activities.
           </p>
           <div class="certificate-img">
-            <img src="https://drive.google.com/uc?export=view&id=1Du5e2Ng2kWvvc7xOOWqmO6KAQKwkeNiB" alt="Science Club Registration Certificate">
+            <img src="https://engineers-den.github.io/engineersden-assets/aboutUS/govt-certificate.jpeg" alt="Science Club Registration Certificate">
           </div>
           <p class="certificate-note">
             Certificate included as a trust element for institutional and public credibility.
