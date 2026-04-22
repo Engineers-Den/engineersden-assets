@@ -1,0 +1,10 @@
+{
+  "stats": [
+    { "label": "Projects completed", "value": 75 },
+    { "label": "Customers served", "value": 50 },
+    { "label": "Students supported", "value": 35 },
+    { "label": "Other Customer", "value": 15 },
+    { "label": "Workshops / events", "value": 2 },
+    { "label": "Years active", "value": 1 }
+  ]
+}
