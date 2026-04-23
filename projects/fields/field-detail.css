@@ -1,0 +1,132 @@
+.field-detail {
+  position: relative;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.detail-content h2 {
+  font-size: 36px;
+  margin: 0 0 16px;
+  color: #162132;
+}
+
+.detail-content > p {
+  color: var(--muted);
+  font-size: 16px;
+  text-align: justify;
+  margin: 0 0 24px;
+  line-height: 1.7;
+}
+
+.detail-content h3 {
+  font-size: 22px;
+  margin: 24px 0 16px;
+  color: #162132;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.service-list li {
+  padding: 10px 0 10px 30px;
+  position: relative;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.service-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.detail-showcase {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showcase-card {
+  padding: 40px 30px;
+  text-align: center;
+  background: linear-gradient(135deg, #ffffff, #f9fcff);
+}
+
+.showcase-icon {
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  margin: 0 auto 20px;
+  background: linear-gradient(135deg, rgba(42,155,232,.12), rgba(240,161,38,.16));
+}
+
+.showcase-card h3 {
+  margin: 0 0 12px;
+  font-size: 26px;
+  color: #162132;
+}
+
+.showcase-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.nav-fields {
+  background: linear-gradient(135deg, rgba(42,155,232,.05), rgba(240,161,38,.06));
+}
+
+.nav-fields-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.nav-field-card {
+  padding: 24px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text);
+  transition: all 0.35s ease;
+}
+
+.nav-field-card:hover {
+  transform: translateY(-4px);
+  color: var(--primary);
+}
+
+@media (max-width: 1100px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-fields-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-content h2 {
+    font-size: 28px;
+  }
+}
