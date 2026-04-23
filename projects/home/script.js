@@ -71,6 +71,19 @@ function setupCarousel(track) {
   startAutoSlide();
 }
 
+function getStatIcon(label) {
+  const text = label.toLowerCase();
+
+  if (text.includes('projects')) return '🧩';
+  if (text.includes('customers served')) return '🤝';
+  if (text.includes('students')) return '🎓';
+  if (text.includes('other customer')) return '🏠';
+  if (text.includes('workshops')) return '🎤';
+  if (text.includes('years')) return '⏳';
+
+  return '📊';
+}
+
 async function loadStats() {
   try {
     const response = await fetch('stats.json');
@@ -81,8 +94,9 @@ async function loadStats() {
 
     data.stats.forEach((stat) => {
       const card = document.createElement('div');
-      card.className = 'stat-card card reveal';
+      card.className = 'stat-card card gold-card reveal';
       card.innerHTML = `
+        <div class="stat-icon">${getStatIcon(stat.label)}</div>
         <div class="num" data-target="${stat.value}">0</div>
         <div class="label">${stat.label}</div>
       `;
@@ -105,7 +119,7 @@ function animateCounters() {
 
       const counter = entry.target;
       const target = Number(counter.dataset.target);
-      const duration = 1400;
+      const duration = 1500;
       const startTime = performance.now();
 
       function updateCount(now) {
