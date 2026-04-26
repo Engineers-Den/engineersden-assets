@@ -4,113 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Engineer's Den</title>
-  <meta name="description" content="Get in touch with Engineer's Den. Contact us for project inquiries, collaborations, and partnerships." />
-  <link rel="stylesheet" href="../home/style.css" />
+  <meta
+    name="description"
+    content="Get in touch with Engineer's Den for collaborations, project support, and engineering solutions."
+  />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <nav class="navbar">
-    <div class="container navbar-container">
-      <div class="nav-brand">
-        <a href="../home/index.html">Engineer's Den</a>
+  <main>
+    <section class="hero reveal" id="hero">
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="container hero-content">
+        <div class="hero-card">
+          <span class="badge">Get In Touch</span>
+          <h1>Let’s build something meaningful together</h1>
+          <p>
+            Have a project in mind? Need engineering support? Let’s collaborate and bring your ideas to life.
+          </p>
+        </div>
       </div>
-      <ul class="nav-links">
-        <li><a href="../home/index.html">Home</a></li>
-        <li><a href="../about/index.html">About</a></li>
-        <li><a href="./index.html" class="active">Contact</a></li>
-        <li><a href="../fields/index.html">Our Fields</a></li>
-      </ul>
-    </div>
-  </nav>
+    </section>
 
-  <section class="hero contact-hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-glow hero-glow-1"></div>
-    <div class="hero-glow hero-glow-2"></div>
+    <section class="section reveal" id="direct-contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge badge-light">Direct Contact</span>
+          <h2>Multiple ways to reach Engineer's Den</h2>
+        </div>
 
-    <div class="container hero-content">
-      <div class="hero-box reveal hero-reveal">
-        <div class="hero-badge">Get In Touch</div>
-        <h1>Contact Engineer's Den</h1>
-        <p class="hero-subtitle">
-          Have a project in mind? Need engineering support? Let's collaborate and bring your ideas to life.
-        </p>
+        <div class="contact-grid">
+          <article class="info-card hover-lift">
+            <h3>Company Phone</h3>
+            <p id="primaryPhone"></p>
+            <p id="secondaryPhone"></p>
+            <a id="primaryPhoneLink" class="text-link" href="#">Call primary</a>
+            <span class="link-sep"> · </span>
+            <a id="secondaryPhoneLink" class="text-link" href="#">Call secondary</a>
+          </article>
+
+          <article class="info-card hover-lift">
+            <h3>WhatsApp</h3>
+            <p id="whatsappPhone"></p>
+            <a id="whatsappLink" class="text-link" href="#" target="_blank" rel="noopener noreferrer">Chat on WhatsApp</a>
+          </article>
+
+          <article class="info-card hover-lift">
+            <h3>Email</h3>
+            <p id="emailValue"></p>
+            <a id="emailLink" class="text-link" href="#">Send email</a>
+          </article>
+
+          <article class="info-card hover-lift">
+            <h3>Facebook</h3>
+            <p>Follow updates and announcements</p>
+            <a id="facebookLink" class="fb-button" href="#" target="_blank" rel="noopener noreferrer" aria-label="Open Engineer's Den Facebook">
+              <span class="fb-icon" aria-hidden="true">f</span>
+              <span>Visit Facebook</span>
+            </a>
+          </article>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section contact-details reveal">
+    <section class="section reveal" id="offices">
+      <div class="container">
+        <div class="section-head">
+          <span class="badge badge-light">Our Offices</span>
+          <h2>Visit us at either location</h2>
+        </div>
+
+        <div class="office-grid">
+          <article class="office-card hover-lift">
+            <h3 id="office1Name"></h3>
+            <p id="office1Address"></p>
+            <a id="office1Map" class="map-btn" href="#" target="_blank" rel="noopener noreferrer">Open Map</a>
+          </article>
+
+          <article class="office-card hover-lift">
+            <h3 id="office2Name"></h3>
+            <p id="office2Address"></p>
+            <a id="office2Map" class="map-btn" href="#" target="_blank" rel="noopener noreferrer">Open Map</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-strip reveal" aria-label="Call to action">
+      <div class="container cta-wrap">
+        <p>Ready to discuss your next project?</p>
+        <a id="ctaWhatsapp" href="#" target="_blank" rel="noopener noreferrer" class="map-btn">Start a Conversation</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
     <div class="container">
-      <div class="section-head">
-        <div class="badge premium-badge">Contact Information</div>
-        <h2 class="section-title premium-title">Multiple ways to reach us.</h2>
-      </div>
-
-      <div class="contact-info-grid">
-        <div class="contact-info-card card gold-card reveal stagger">
-          <div class="contact-icon">📞</div>
-          <h3>Phone</h3>
-          <p>
-            <a href="https://wa.me/8801705188134" target="_blank" rel="noopener noreferrer">01705188134 (WhatsApp)</a>
-          </p>
-          <p>
-            <a href="tel:01748339454">01748339454</a>
-          </p>
-        </div>
-
-        <div class="contact-info-card card gold-card reveal stagger">
-          <div class="contact-icon">📧</div>
-          <h3>Email</h3>
-          <p>
-            <a href="mailto:engineersden15@gmail.com">engineersden15@gmail.com</a>
-          </p>
-          <p>Response time: Within 24 hours</p>
-        </div>
-
-        <div class="contact-info-card card gold-card reveal stagger">
-          <div class="contact-icon">📍</div>
-          <h3>Office 1</h3>
-          <p>50 meter West of Greater road mosque</p>
-          <p>Kadirganj, Rajshahi</p>
-          <a href="https://maps.app.goo.gl/QsUctiAoa7hXpEz16" target="_blank" rel="noopener noreferrer" class="btn btn-small">View on Map</a>
-        </div>
-
-        <div class="contact-info-card card gold-card reveal stagger">
-          <div class="contact-icon">🏢</div>
-          <h3>Office 2</h3>
-          <p>Niketon Bazar Gate</p>
-          <p>Gulshan, Dhaka</p>
-          <a href="#" class="btn btn-small">View on Map</a>
-        </div>
+      <div class="footer-note">
+        © Engineer's Den — Innovation through R&amp;D, product development, and science-driven action.
       </div>
     </div>
-  </section>
+  </footer>
 
-  <section class="section social-section reveal">
-    <div class="container">
-      <div class="section-head">
-        <div class="badge premium-badge">Follow Us</div>
-        <h2 class="section-title premium-title">Stay connected on social media.</h2>
-      </div>
-
-      <div class="social-links-grid">
-        <a href="https://www.facebook.com/profile.php?id=61572656340205" target="_blank" rel="noopener noreferrer" class="social-card card gold-card reveal stagger">
-          <div class="social-icon">f</div>
-          <h3>Facebook</h3>
-          <p>Follow our latest updates and posts</p>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <div class="container">
-    <div class="footer-note">
-      © Engineer's Den — Innovation through R&D, product development, and science-driven action.
-    </div>
-  </div>
-
-  <script src="../home/script.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
